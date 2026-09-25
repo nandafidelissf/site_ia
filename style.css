@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #07071a;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(7, 7, 26, 0.95);
+    border-bottom: 1px solid #28285c;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #7c4dff;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #c9c9e8;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.ativo {
+    color: #4dc9ff;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+
+    background:
+        radial-gradient(circle at 15% 40%, #6f2cff55, transparent 30%),
+        radial-gradient(circle at 85% 30%, #009dff44, transparent 30%),
+        linear-gradient(135deg, #090923, #10104a, #08081b);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 2px solid #694dff55;
+    border-radius: 50%;
+    right: -150px;
+    bottom: -200px;
+}
+
+.hero-conteudo {
+    max-width: 850px;
+    position: relative;
+    z-index: 2;
+}
+
+.data {
+    color: #4dc9ff;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 10vw, 125px);
+    line-height: 0.85;
+    font-weight: 900;
+    letter-spacing: -5px;
+}
+
+.hero h1 span {
+    color: #704cff;
+    text-shadow: 0 0 35px #704cff88;
+}
+
+.descricao {
+    max-width: 650px;
+    margin: 30px 0;
+    color: #c9c9e8;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* ================= BOTÕES ================= */
+
+.botoes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #704cff, #198cff);
+    color: white;
+    font-weight: 800;
+    font-size: 13px;
+    border: none;
+    transition: 0.3s;
+    box-shadow: 0 0 25px #604dff44;
+}
+
+.botao:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 35px #4dc9ff66;
+}
+
+.botao.secundario {
+    background: transparent;
+    border: 1px solid #4dc9ff;
+}
+
+/* ================= SEÇÕES ================= */
+
+.secao {
+    width: 86%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 0;
+}
+
+.secao > h2,
+.destaque h2 {
+    font-size: 38px;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+.azul {
+    color: #4dc9ff;
+}
+
+/* ================= CARDS ================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: linear-gradient(145deg, #131337, #0d0d25);
+    border: 1px solid #35356d;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #674dff;
+    box-shadow: 0 15px 40px #5746ff33;
+}
+
+.foto-artista {
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.ariana {
+    background: linear-gradient(135deg, #733cff, #bd49ff);
+}
+
+.anitta {
+    background: linear-gradient(135deg, #006eff, #35caff);
+}
+
+.dua {
+    background: linear-gradient(135deg, #351cff, #006dff);
+}
+
+.card-conteudo {
+    padding: 25px;
+}
+
+.card-conteudo span {
+    color: #4dc9ff;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.card-conteudo h3 {
+    font-size: 23px;
+    margin: 8px 0;
+}
+
+.card-conteudo p {
+    color: #aaaad0;
+}
+
+/* ================= DESTAQUE ================= */
+
+.destaque {
+    padding: 100px 8%;
+    background:
+        radial-gradient(circle at 70% 50%, #007dff44, transparent 35%),
+        #0c0c2b;
+}
+
+.destaque h2 {
+    margin: 0;
+    font-size: clamp(40px, 7vw, 85px);
+}
+
+.destaque p {
+    max-width: 550px;
+    margin-top: 25px;
+    color: #bdbddd;
+    font-size: 17px;
+}
+
+/* ================= PÁGINAS ================= */
+
+.pagina-topo {
+    text-align: center;
+    padding: 100px 20px 60px;
+
+    background:
+        radial-gradient(circle at 50% 0%, #634cff55, transparent 45%),
+        #090923;
+}
+
+.pagina-topo p:first-child {
+    color: #4dc9ff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.pagina-topo h1 {
+    font-size: clamp(45px, 8vw, 90px);
+    margin: 15px 0;
+    color: #744dff;
+    text-shadow: 0 0 30px #744dff55;
+}
+
+.pagina-topo p:last-child {
+    color: #aaaad0;
+}
+
+/* ================= LINE-UP ================= */
+
+.dia {
+    margin-bottom: 60px;
+}
+
+.dia h2 {
+    color: #4dc9ff;
+    margin-bottom: 20px;
+}
+
+.lista-artistas {
+    display: grid;
+    gap: 12px;
+}
+
+.artista {
+    padding: 22px 25px;
+    background: #121232;
+    border: 1px solid #303061;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.artista:hover {
+    border-color: #714cff;
+    transform: translateX(5px);
+}
+
+.artista strong {
+    font-size: 19px;
+}
+
+.artista span {
+    color: #9b9bc5;
+    font-size: 14px;
+}
+
+/* ================= INGRESSOS ================= */
+
+.ingressos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.ingresso {
+    background: #121232;
+    border: 1px solid #35356d;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+}
+
+.ingresso h2 {
+    color: #4dc9ff;
+    margin-bottom: 20px;
+}
+
+.ingresso p {
+    color: #aaaad0;
+    min-height: 55px;
+}
+
+.preco {
+    font-size: 38px;
+    font-weight: 900;
+    margin: 30px 0;
+}
+
+.destaque-ingresso {
+    border-color: #704cff;
+    box-shadow: 0 0 35px #704cff33;
+}
+
+.tag {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #704cff, #198cff);
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* ================= INFORMAÇÕES ================= */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.info-box {
+    padding: 30px;
+    border-radius: 18px;
+    background: #121232;
+    border: 1px solid #303061;
+}
+
+.info-box h2 {
+    color: #4dc9ff;
+    margin-bottom: 15px;
+}
+
+.info-box p {
+    color: #c2c2df;
+}
+
+.regras {
+    margin-top: 50px;
+    padding: 35px;
+    background: #10102d;
+    border-radius: 20px;
+    border: 1px solid #303061;
+}
+
+.regras h2 {
+    color: #744dff;
+    margin-bottom: 20px;
+}
+
+.regras li {
+    margin: 12px 0;
+    color: #c2c2df;
+}
+
+/* ================= FAQ ================= */
+
+.faq {
+    max-width: 900px;
+    margin: auto;
+}
+
+details {
+    background: #121232;
+    border: 1px solid #303061;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 20px 25px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+details p {
+    margin-top: 15px;
+    color: #aaaad0;
+    line-height: 1.7;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 35px;
+    background: #050512;
+    border-top: 1px solid #272752;
+    color: #77779d;
+    font-size: 13px;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 850px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .cards,
+    .ingressos {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artista {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+}
